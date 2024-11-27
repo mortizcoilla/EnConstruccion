@@ -1,0 +1,115 @@
+/* Aseguramos que el html y body ocupen todo el espacio disponible */
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General container styles */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Altura mínima de la ventana */
+  min-width: 100vw; /* Ancho mínimo de la ventana */
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: #ffffff;
+  font-family: "Arial", sans-serif;
+  text-align: center;
+  padding: 0 20px; /* Espaciado para dispositivos pequeños */
+  box-sizing: border-box;
+  overflow: hidden; /* Evita barras de scroll innecesarias */
+}
+
+/* Title styles */
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.title span {
+  color: #ffd700; /* Amarillo dorado */
+}
+
+/* Subtitle styles */
+.subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.subtitle .github-link {
+  color: #00e1ff;
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: color 0.3s, border-bottom 0.3s;
+}
+
+.subtitle .github-link:hover {
+  color: #ffd700;
+  border-bottom: 2px solid #ffd700;
+}
+
+/* GitHub icon styles */
+.github-icon-container {
+  margin-top: 1rem;
+}
+
+.github-icon {
+  font-size: 3.5rem;
+  color: #ffffff;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.github-icon:hover {
+  transform: scale(1.3);
+  color: #ffd700;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .github-icon {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+  }
+
+  .github-icon {
+    font-size: 2rem;
+  }
+}
